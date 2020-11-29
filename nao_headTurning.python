@@ -1,0 +1,114 @@
+from naoqi import ALProxy
+names = list()
+times = list()
+keys = list()
+
+names.append("HeadPitch")
+times.append([0, 0.36])
+keys.append([-0.284489, -0.284489])
+
+names.append("HeadYaw")
+times.append([0, 0.36])
+keys.append([-0.624086, -0.624086])
+
+names.append("LAnklePitch")
+times.append([0, 0.36])
+keys.append([0.0516441, 0.0516441])
+
+names.append("LAnkleRoll")
+times.append([0, 0.36])
+keys.append([-0.095728, -0.095728])
+
+names.append("LElbowRoll")
+times.append([0, 0.36])
+keys.append([-0.434278, -0.434278])
+
+names.append("LElbowYaw")
+times.append([0, 0.36])
+keys.append([-1.22782, -1.22782])
+
+names.append("LHand")
+times.append([0, 0.36])
+keys.append([0.3, 0.3])
+
+names.append("LHipPitch")
+times.append([0, 0.36])
+keys.append([0.101466, 0.101466])
+
+names.append("LHipRoll")
+times.append([0, 0.36])
+keys.append([0.102516, 0.102516])
+
+names.append("LHipYawPitch")
+times.append([0, 0.36])
+keys.append([-0.159951, -0.159951])
+
+names.append("LKneePitch")
+times.append([0, 0.36])
+keys.append([-0.060619, -0.060619])
+
+names.append("LShoulderPitch")
+times.append([0, 0.36])
+keys.append([1.43994, 1.43994])
+
+names.append("LShoulderRoll")
+times.append([0, 0.36])
+keys.append([0.266161, 0.266161])
+
+names.append("LWristYaw")
+times.append([0, 0.36])
+keys.append([0.0901951, 0.0901951])
+
+names.append("RAnklePitch")
+times.append([0, 0.36])
+keys.append([0.0516441, 0.0516441])
+
+names.append("RAnkleRoll")
+times.append([0, 0.36])
+keys.append([0.0971344, 0.0971344])
+
+names.append("RElbowRoll")
+times.append([0, 0.36])
+keys.append([0.353159, 0.353159])
+
+names.append("RElbowYaw")
+times.append([0, 0.36])
+keys.append([1.21377, 1.21377])
+
+names.append("RHand")
+times.append([0, 0.36])
+keys.append([0.401262, 0.401262])
+
+names.append("RHipPitch")
+times.append([0, 0.36])
+keys.append([0.101466, 0.101466])
+
+names.append("RHipRoll")
+times.append([0, 0.36])
+keys.append([-0.103078, -0.103078])
+
+names.append("RHipYawPitch")
+times.append([0, 0.36])
+keys.append([-0.159951, -0.159951])
+
+names.append("RKneePitch")
+times.append([0, 0.36])
+keys.append([-0.060619, -0.060619])
+
+names.append("RShoulderPitch")
+times.append([0, 0.36])
+keys.append([1.22641, 1.22641])
+
+names.append("RShoulderRoll")
+times.append([0, 0.36])
+keys.append([-0.212991, -0.212991])
+
+names.append("RWristYaw")
+times.append([0, 0.36])
+keys.append([0.0871567, 0.0871567])
+
+try:
+  motion = ALProxy("ALMotion")
+  motion.angleInterpolation(names, keys, times, True)
+except BaseException, err:
+  print err
